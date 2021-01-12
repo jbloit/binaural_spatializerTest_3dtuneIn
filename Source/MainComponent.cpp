@@ -51,6 +51,7 @@ MainComponent::~MainComponent()
 {
     // This shuts down the audio device and clears the audio source.
     shutdownAudio();
+    audioPlayer.releaseResources();
 }
 
 //==============================================================================
@@ -59,10 +60,14 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
     
     myCore.SetAudioState({static_cast<int>(sampleRate), samplesPerBlockExpected});
     myCore.SetHRTFResamplingStep(HRTF_resamplingStep);
+    
+    audioPlayer.prepareToPlay(samplesPerBlockExpected, sampleRate);
 }
 
 void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& bufferToFill)
 {
+    
+    audioPlayer.getNextAudioBlock(bufferToFill);
 
     auto rmsL = bufferToFill.buffer->getRMSLevel(0, 0, bufferToFill.numSamples);
     auto rmsR = bufferToFill.buffer->getRMSLevel(1, 0, bufferToFill.numSamples);

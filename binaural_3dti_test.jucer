@@ -4,7 +4,13 @@
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
               headerPath="/Users/jbloit/repos/testApps/binaural_3dti_test/Source/3dti_Toolkit&#10;/Users/jbloit/repos/libs/eigen&#10;/Users/jbloit/repos/libs/cereal/include&#10;/Users/jbloit/repos/libs/API_Cpp/libsofa/src&#10;/Users/jbloit/repos/libs/API_Cpp/libsofa/dependencies/include">
   <MAINGROUP id="GcWq8j" name="binaural_3dti_test">
+    <GROUP id="{B52EEE15-DF34-50AE-0359-8F9675E51C1A}" name="audio">
+      <FILE id="Fovc0z" name="keysRattling.aif" compile="0" resource="1"
+            file="assets/audio/keysRattling.aif"/>
+    </GROUP>
     <GROUP id="{7CCE7E08-7B1E-228D-9D6D-B8AEEDF024CD}" name="Source">
+      <FILE id="F72QUj" name="AudioPlayer.cpp" compile="1" resource="0" file="Source/AudioPlayer.cpp"/>
+      <FILE id="nV1K5Y" name="AudioPlayer.h" compile="0" resource="0" file="Source/AudioPlayer.h"/>
       <GROUP id="{A4C56DD5-E5C7-CB0D-5AC6-9D07833BBD4F}" name="3dti_ResourceManager">
         <GROUP id="{099EC8B8-0207-6F0C-A547-A988EE650251}" name="HRTF">
           <FILE id="dow2Ig" name="HRTFCereal.cpp" compile="1" resource="0" file="Source/3dti_ResourceManager/HRTF/HRTFCereal.cpp"/>
