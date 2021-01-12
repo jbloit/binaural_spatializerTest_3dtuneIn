@@ -63,13 +63,57 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
 
 void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& bufferToFill)
 {
-    // Your audio-processing code goes here!
+
+    auto rmsL = bufferToFill.buffer->getRMSLevel(0, 0, bufferToFill.numSamples);
+    auto rmsR = bufferToFill.buffer->getRMSLevel(1, 0, bufferToFill.numSamples);
+    DBG("rmsL " << juce::String(rmsL));
+    DBG("rmsR " << juce::String(rmsR));
+    /*
     
-    // For more details, see the help for AudioProcessor::getNextAudioBlock()
+//    bufferToFill.clearActiveBufferRegion();
     
-    // Right now we are not producing any data, in which case we need to clear the buffer
-    // (to prevent the output of random noise)
-    bufferToFill.clearActiveBufferRegion();
+      // 1. Declare anechoic output mix, which consists of a pair of mono buffers (one for each channel/ear)
+  Common::CEarPair<CMonoBuffer<float>> bAnechoicOutput;
+  bAnechoicOutput.left.resize(bufferToFill.numSamples);
+  bAnechoicOutput.right.resize(bufferToFill.numSamples);
+
+  // 2. Iterate through sources
+
+    // 3. Get input chunk for this source
+    // Your audio framework should provide you with the necessary methods to obtain the chunk
+    CMonoBuffer< float > bInput(bufferToFill.numSamples);
+
+    bInput.Feed( bufferToFill.buffer->getWritePointer(0), bufferToFill.numSamples, 1);
+    
+    
+    // 4. Declare output for this source. Core assumes output is a pair of mono buffers (one for each channel/ear)
+    Common::CEarPair<CMonoBuffer<float>> singleSourceAnechoicOut;
+
+    // 5. Spatialise this source, updating the input buffer and passing the output buffer
+    {
+        const juce::ScopedLock sl (lock);
+        mySource->SetBuffer(bInput);
+          mySource->ProcessAnechoic(singleSourceAnechoicOut.left, singleSourceAnechoicOut.right);
+    }
+    
+    // 6. Add this source output to the anechoic output mix
+    bAnechoicOutput.left += singleSourceAnechoicOut.left;
+    bAnechoicOutput.right += singleSourceAnechoicOut.right;
+  
+
+
+
+//    for (int chan = 0; chan < bufferToFill.buffer->getNumChannels(); chan++)
+    for (int chan = 0; chan < 2; chan++)
+    {
+        for (int i=0; i < bufferToFill.numSamples; i++)
+        {
+            bufferToFill.buffer->getWritePointer(chan)[i]  = bAnechoicOutput.left[i];
+        }
+    }
+    
+     */
+
 }
 
 void MainComponent::releaseResources()
