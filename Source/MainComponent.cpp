@@ -5,12 +5,18 @@ MainComponent::MainComponent()
 {
 
     addAndMakeVisible(sliderX);
+    sliderX.setRange(-20.0, 20.0);
+    sliderX.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
     sliderX.addListener(this);
     
     addAndMakeVisible(sliderY);
+    sliderY.setRange(-20.0, 20.0);
+    sliderY.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
     sliderY.addListener(this);
     
     addAndMakeVisible(sliderZ);
+    sliderZ.setRange(-20.0, 20.0);
+    sliderZ.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
     sliderZ.addListener(this);
     
     
@@ -114,15 +120,15 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     bAnechoicOutput.left += singleSourceAnechoicOut.left;
     bAnechoicOutput.right += singleSourceAnechoicOut.right;
   
-
-
-
-//    for (int chan = 0; chan < bufferToFill.buffer->getNumChannels(); chan++)
     for (int chan = 0; chan < 2; chan++)
     {
         for (int i=0; i < bufferToFill.numSamples; i++)
         {
-            bufferToFill.buffer->getWritePointer(chan)[i]  = bAnechoicOutput.left[i];
+            //QUICK AND DIRTY I KNOW
+            if (chan == 0)
+                bufferToFill.buffer->getWritePointer(chan)[i]  = bAnechoicOutput.left[i];
+            else
+                bufferToFill.buffer->getWritePointer(chan)[i]  = bAnechoicOutput.right[i];
         }
     }
     
@@ -170,12 +176,13 @@ void MainComponent::timerCallback()
     }
     
     // 3. Set the transformation (position & orientation) for the listener, for instance:
-//    Common::CTransform listenerTrf;
-//    listernerTrf.SetOrientation(CQuaternion(qw, qx, qy, qz));
-//    {
-//        const juce::ScopedLock sl (lock);
-//        listener->SetListenerTransform(listenerTrf);
-//    }
+    Common::CTransform listenerTrf;
+//    listenerTrf.SetOrientation(Common::CQuaternion(0, 0, 0, 0));
+    listenerTrf.SetPosition(Common::CVector3(0,0,0));
+    {
+        const juce::ScopedLock sl (lock);
+        listener->SetListenerTransform(listenerTrf);
+    }
 }
 
 
