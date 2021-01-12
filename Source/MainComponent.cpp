@@ -19,6 +19,31 @@ MainComponent::MainComponent()
         // Specify the number of input and output channels that we want to open
         setAudioChannels (2, 2);
     }
+    
+    // binaural setup
+    listener = myCore.CreateListener();
+    mySource = myCore.CreateSingleSourceDSP();
+    mySource->SetSpatializationMode(Binaural::TSpatializationMode::HighQuality);
+    
+    // Load HRTF file, from a SOFA or 3DTI file, into the CHRTF head of the listener.
+    juce::String hrtf3DTIFile_PATH = "/Users/jbloit/repos/libs/3dti_AudioToolkit/resources/HRTF/3DTI/3DTI_HRTF_IRC1053_512s_44100Hz.3dti-hrtf";
+    
+    bool result = HRTF::CreateFrom3dti(hrtf3DTIFile_PATH.toStdString(), listener);
+    if (result) {
+        cout<< "HRTF has been loaded successfully";
+    }
+    else {
+        cout<< "HRTF has NOT been loaded successfully";
+    }
+
+    // Load ILD for Near Field effect from 3DTI file.
+    juce::String fileILDNearFieldEffect = "/Users/jbloit/repos/libs/3dti_AudioToolkit/resources/ILD/NearFieldCompensation_ILD_44100.3dti-ild";
+    result = ILD::CreateFrom3dti_ILDNearFieldEffectTable(fileILDNearFieldEffect.toStdString(), listener);
+    if (result) { cout<< "ILD Near Field Effect simulation file has been loaded successfully";}
+    else {
+        cout<< "ILD Near Field Effect simulation file has NOT been loaded successfully";
+    }
+
 }
 
 MainComponent::~MainComponent()

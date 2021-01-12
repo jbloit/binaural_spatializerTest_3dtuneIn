@@ -2,9 +2,24 @@
 
 <JUCERPROJECT id="ULlFfJ" name="binaural_3dti_test" projectType="guiapp" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              headerPath="/Users/jbloit/repos/testApps/binaural_3dti_test/Source/3dti_Toolkit&#10;/Users/jbloit/repos/libs/eigen&#10;">
+              headerPath="/Users/jbloit/repos/testApps/binaural_3dti_test/Source/3dti_Toolkit&#10;/Users/jbloit/repos/libs/eigen&#10;/Users/jbloit/repos/libs/cereal/include&#10;/Users/jbloit/repos/libs/API_Cpp/libsofa/src&#10;/Users/jbloit/repos/libs/API_Cpp/libsofa/dependencies/include">
   <MAINGROUP id="GcWq8j" name="binaural_3dti_test">
     <GROUP id="{7CCE7E08-7B1E-228D-9D6D-B8AEEDF024CD}" name="Source">
+      <GROUP id="{A4C56DD5-E5C7-CB0D-5AC6-9D07833BBD4F}" name="3dti_ResourceManager">
+        <GROUP id="{099EC8B8-0207-6F0C-A547-A988EE650251}" name="HRTF">
+          <FILE id="dow2Ig" name="HRTFCereal.cpp" compile="1" resource="0" file="Source/3dti_ResourceManager/HRTF/HRTFCereal.cpp"/>
+          <FILE id="hJX8Kk" name="HRTFCereal.h" compile="0" resource="0" file="Source/3dti_ResourceManager/HRTF/HRTFCereal.h"/>
+        </GROUP>
+        <GROUP id="{AE1B51F2-EA2C-F1F5-036D-6BB8627866F2}" name="ILD">
+          <FILE id="dTv8m0" name="ILDCereal.cpp" compile="1" resource="0" file="Source/3dti_ResourceManager/ILD/ILDCereal.cpp"/>
+          <FILE id="Fgk80i" name="ILDCereal.h" compile="0" resource="0" file="Source/3dti_ResourceManager/ILD/ILDCereal.h"/>
+        </GROUP>
+        <GROUP id="{9B2704D2-6470-B435-748D-2B13F8F1CFBF}" name="third_party_libraries">
+          <GROUP id="{DFD95BA6-0B42-E8D7-65FF-08A52CC361F1}" name="cereal"/>
+          <GROUP id="{8EC4B969-681C-1717-6D63-A36BE9B687AD}" name="eigen"/>
+          <GROUP id="{C339E35F-D989-53B5-20C1-486251B3F489}" name="sofacoustics"/>
+        </GROUP>
+      </GROUP>
       <GROUP id="{C9E0392A-2A6B-004E-7497-03756567B774}" name="3dti_Toolkit">
         <GROUP id="{B09366C7-3C96-FBC4-A3A9-B883CCED5D7E}" name="BinauralSpatializer">
           <FILE id="wUU2YB" name="3DTI_BinauralSpatializer.h" compile="0" resource="0"
