@@ -3,8 +3,17 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
-    // Make sure you set the size of the component after
-    // you add any child components.
+
+    addAndMakeVisible(sliderX);
+    sliderX.addListener(this);
+    
+    addAndMakeVisible(sliderY);
+    sliderY.addListener(this);
+    
+    addAndMakeVisible(sliderZ);
+    sliderZ.addListener(this);
+    
+    
     setSize (800, 600);
     
     // Some platforms require permissions to open input channels so request that here
@@ -140,9 +149,11 @@ void MainComponent::paint (juce::Graphics& g)
 
 void MainComponent::resized()
 {
-    // This is called when the MainContentComponent is resized.
-    // If you add any child components, this is where you should
-    // update their positions.
+    auto area = getLocalBounds();
+    
+    sliderX.setBounds(area.removeFromLeft(proportionOfWidth(0.3)));
+    sliderY.setBounds(area.removeFromLeft(proportionOfWidth(0.3)));
+    sliderZ.setBounds(area);
 }
 
 
@@ -150,7 +161,8 @@ void MainComponent::timerCallback()
 {
     
     Common::CTransform newSourceTrf;
-    newSourceTrf.SetPosition(Common::CVector3(0.0, 0.0, 0.0));    //Move source to absolute position
+    newSourceTrf.SetPosition(Common::CVector3(sliderX.getValueObject().getValue(),
+                                              sliderY.getValueObject().getValue(), sliderZ.getValueObject().getValue()));    //Move source to absolute position
 
     {
         const juce::ScopedLock sl (lock);
@@ -164,4 +176,29 @@ void MainComponent::timerCallback()
 //        const juce::ScopedLock sl (lock);
 //        listener->SetListenerTransform(listenerTrf);
 //    }
+}
+
+
+void MainComponent::sliderValueChanged (juce::Slider* slider)
+{
+    if (slider == &sliderX)
+    {
+        auto val = sliderX.getValueObject().getValue();
+        DBG("slider X value " << val.toString());
+        return;
+    }
+    
+    if (slider == &sliderY)
+    {
+        auto val = sliderY.getValueObject().getValue();
+        DBG("slider Y value " << val.toString());
+        return;
+    }
+    
+    if (slider == &sliderZ)
+    {
+        auto val = sliderZ.getValueObject().getValue();
+        DBG("slider Z value " << val.toString());
+        return;
+    }
 }

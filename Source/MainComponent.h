@@ -12,7 +12,8 @@
     your controls and content.
 */
 class MainComponent  : public juce::AudioAppComponent,
-public juce::Timer
+public juce::Timer,
+public juce::Slider::Listener
 {
 public:
     //==============================================================================
@@ -47,6 +48,12 @@ private:
     juce::CriticalSection lock;
     
     AudioPlayer audioPlayer;
+    
+    juce::Slider sliderX;
+    juce::Slider sliderY;
+    juce::Slider sliderZ;
+    
+    void sliderValueChanged (juce::Slider* slider) override;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
