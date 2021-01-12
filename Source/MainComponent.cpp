@@ -69,11 +69,11 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     
     audioPlayer.getNextAudioBlock(bufferToFill);
 
-    auto rmsL = bufferToFill.buffer->getRMSLevel(0, 0, bufferToFill.numSamples);
-    auto rmsR = bufferToFill.buffer->getRMSLevel(1, 0, bufferToFill.numSamples);
-    DBG("rmsL " << juce::String(rmsL));
-    DBG("rmsR " << juce::String(rmsR));
-    /*
+//    auto rmsL = bufferToFill.buffer->getRMSLevel(0, 0, bufferToFill.numSamples);
+//    auto rmsR = bufferToFill.buffer->getRMSLevel(1, 0, bufferToFill.numSamples);
+//    DBG("rmsL " << juce::String(rmsL));
+//    DBG("rmsR " << juce::String(rmsR));
+    
     
 //    bufferToFill.clearActiveBufferRegion();
     
@@ -117,7 +117,7 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
         }
     }
     
-     */
+     
 
 }
 
@@ -150,7 +150,7 @@ void MainComponent::timerCallback()
 {
     
     Common::CTransform newSourceTrf;
-    newSourceTrf.SetPosition(Common::CVector3(0.2,0.3,0.0));    //Move source to absolute position
+    newSourceTrf.SetPosition(Common::CVector3(0.0, 0.0, 0.0));    //Move source to absolute position
 
     {
         const juce::ScopedLock sl (lock);
