@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="ULlFfJ" name="binaural_3dti_test" projectType="guiapp" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              headerPath="/Users/jbloit/repos/testApps/binaural_3dti_test/Source/3dti_Toolkit&#10;/Users/jbloit/repos/libs/eigen&#10;">
+  <MAINGROUP id="GcWq8j" name="binaural_3dti_test">
+    <GROUP id="{7CCE7E08-7B1E-228D-9D6D-B8AEEDF024CD}" name="Source">
+      <GROUP id="{C9E0392A-2A6B-004E-7497-03756567B774}" name="3dti_Toolkit">
+        <GROUP id="{B09366C7-3C96-FBC4-A3A9-B883CCED5D7E}" name="BinauralSpatializer">
+          <FILE id="wUU2YB" name="3DTI_BinauralSpatializer.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/BinauralSpatializer/3DTI_BinauralSpatializer.h"/>
+          <FILE id="SSd7pM" name="BRIR.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/BRIR.cpp"/>
+          <FILE id="jHVUUg" name="BRIR.h" compile="0" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/BRIR.h"/>
+          <FILE id="ZwBYq1" name="Core.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/Core.cpp"/>
+          <FILE id="FtePT8" name="Core.h" compile="0" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/Core.h"/>
+          <FILE id="nutmNG" name="Environment.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/Environment.cpp"/>
+          <FILE id="gIZoYg" name="Environment.h" compile="0" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/Environment.h"/>
+          <FILE id="QYfcPe" name="HRTF.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/HRTF.cpp"/>
+          <FILE id="n9Feoz" name="HRTF.h" compile="0" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/HRTF.h"/>
+          <FILE id="dadU9m" name="ILD.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/ILD.cpp"/>
+          <FILE id="Qcgec1" name="ILD.h" compile="0" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/ILD.h"/>
+          <FILE id="lU8VBR" name="Listener.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/Listener.cpp"/>
+          <FILE id="tzdXJ9" name="Listener.h" compile="0" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/Listener.h"/>
+          <FILE id="FCoMAe" name="SingleSourceDSP.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/BinauralSpatializer/SingleSourceDSP.cpp"/>
+          <FILE id="jCGas6" name="SingleSourceDSP.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/BinauralSpatializer/SingleSourceDSP.h"/>
+          <FILE id="u4TYWs" name="UPCAnechoic.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/UPCAnechoic.cpp"/>
+          <FILE id="Fc6udk" name="UPCAnechoic.h" compile="0" resource="0" file="Source/3dti_Toolkit/BinauralSpatializer/UPCAnechoic.h"/>
+        </GROUP>
+        <GROUP id="{BA820349-D189-ADDC-DBA4-ACF153F575E0}" name="Common">
+          <FILE id="VRxowh" name="AIR.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/AIR.h"/>
+          <FILE id="D6AXLW" name="AudioState.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/AudioState.h"/>
+          <FILE id="UWLhAO" name="BiquadFilter.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/BiquadFilter.cpp"/>
+          <FILE id="J3VhQ9" name="BiquadFilter.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/BiquadFilter.h"/>
+          <FILE id="G36AWL" name="Buffer.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/Buffer.h"/>
+          <FILE id="O2XgMT" name="CommonDefinitions.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/CommonDefinitions.h"/>
+          <FILE id="qc2HSX" name="Conventions.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/Conventions.h"/>
+          <FILE id="rCGLlf" name="Delay.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/Common/Delay.cpp"/>
+          <FILE id="Vug9pn" name="Delay.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/Delay.h"/>
+          <FILE id="RFlz9z" name="DistanceAttenuator.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/DistanceAttenuator.cpp"/>
+          <FILE id="hbZE1z" name="DistanceAttenuator.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/DistanceAttenuator.h"/>
+          <FILE id="jSxViU" name="DynamicCompressorMono.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/DynamicCompressorMono.cpp"/>
+          <FILE id="CPjTLu" name="DynamicCompressorMono.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/DynamicCompressorMono.h"/>
+          <FILE id="oX4Q8o" name="DynamicCompressorStereo.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/DynamicCompressorStereo.cpp"/>
+          <FILE id="xjKGGi" name="DynamicCompressorStereo.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/DynamicCompressorStereo.h"/>
+          <FILE id="ShUZ08" name="DynamicExpanderMono.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/DynamicExpanderMono.cpp"/>
+          <FILE id="pm4b28" name="DynamicExpanderMono.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/DynamicExpanderMono.h"/>
+          <FILE id="XEIxdG" name="DynamicProcessor.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/DynamicProcessor.h"/>
+          <FILE id="aEG2C1" name="EnvelopeDetector.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/EnvelopeDetector.cpp"/>
+          <FILE id="QIiu1E" name="EnvelopeDetector.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/EnvelopeDetector.h"/>
+          <FILE id="ylHC3I" name="ErrorHandler.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/ErrorHandler.cpp"/>
+          <FILE id="KwPBOf" name="ErrorHandler.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/ErrorHandler.h"/>
+          <FILE id="f69PPQ" name="FarDistanceEffects.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/FarDistanceEffects.cpp"/>
+          <FILE id="VBwvL2" name="FarDistanceEffects.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/FarDistanceEffects.h"/>
+          <FILE id="rdZgZz" name="fftsg.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/Common/fftsg.cpp"/>
+          <FILE id="xGaEKw" name="fftsg.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/fftsg.h"/>
+          <FILE id="X4qt9Y" name="FiltersBank.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/Common/FiltersBank.cpp"/>
+          <FILE id="NZQY86" name="FiltersBank.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/FiltersBank.h"/>
+          <FILE id="jdUdvf" name="FiltersChain.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/FiltersChain.cpp"/>
+          <FILE id="FirJqY" name="FiltersChain.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/FiltersChain.h"/>
+          <FILE id="FNVv1d" name="Fprocessor.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/Common/Fprocessor.cpp"/>
+          <FILE id="oyHEgG" name="Fprocessor.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/Fprocessor.h"/>
+          <FILE id="DZPCVL" name="GammatoneFilter.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/GammatoneFilter.cpp"/>
+          <FILE id="Fs5JCf" name="GammatoneFilter.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/GammatoneFilter.h"/>
+          <FILE id="mQrwXP" name="GammatoneFilterBank.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/GammatoneFilterBank.cpp"/>
+          <FILE id="qD1JGi" name="GammatoneFilterBank.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/GammatoneFilterBank.h"/>
+          <FILE id="TI5ohb" name="Magnitudes.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/Common/Magnitudes.cpp"/>
+          <FILE id="X6gBUc" name="Magnitudes.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/Magnitudes.h"/>
+          <FILE id="YuldrQ" name="NoiseGenerator.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/NoiseGenerator.cpp"/>
+          <FILE id="GjHZP2" name="NoiseGenerator.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/NoiseGenerator.h"/>
+          <FILE id="KRmPbf" name="Profiler.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/Common/Profiler.cpp"/>
+          <FILE id="MJ35tJ" name="Profiler.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/Profiler.h"/>
+          <FILE id="sLaZQ5" name="Quaternion.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/Common/Quaternion.cpp"/>
+          <FILE id="WotdM1" name="Quaternion.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/Quaternion.h"/>
+          <FILE id="MOaexq" name="Transform.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/Common/Transform.cpp"/>
+          <FILE id="eKPSsQ" name="Transform.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/Transform.h"/>
+          <FILE id="buB8n3" name="UPCEnvironment.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/Common/UPCEnvironment.cpp"/>
+          <FILE id="e8p2n1" name="UPCEnvironment.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/Common/UPCEnvironment.h"/>
+          <FILE id="vNAh8r" name="Vector3.cpp" compile="1" resource="0" file="Source/3dti_Toolkit/Common/Vector3.cpp"/>
+          <FILE id="GEU7zb" name="Vector3.h" compile="0" resource="0" file="Source/3dti_Toolkit/Common/Vector3.h"/>
+        </GROUP>
+        <GROUP id="{7B817FAA-AA0A-EFCD-3BE3-B9983A7737C0}" name="HAHLSimulation">
+          <FILE id="DxfuXc" name="3DTI_HAHLSimulator.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/3DTI_HAHLSimulator.h"/>
+          <FILE id="RAK4kF" name="BaerMooreFrequencySmearing.cpp" compile="1"
+                resource="0" file="Source/3dti_Toolkit/HAHLSimulation/BaerMooreFrequencySmearing.cpp"/>
+          <FILE id="x4AObi" name="BaerMooreFrequencySmearing.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/BaerMooreFrequencySmearing.h"/>
+          <FILE id="RbIqsT" name="ButterworthMultibandExpander.cpp" compile="1"
+                resource="0" file="Source/3dti_Toolkit/HAHLSimulation/ButterworthMultibandExpander.cpp"/>
+          <FILE id="Z1WFRB" name="ButterworthMultibandExpander.h" compile="0"
+                resource="0" file="Source/3dti_Toolkit/HAHLSimulation/ButterworthMultibandExpander.h"/>
+          <FILE id="H0ptxh" name="ClassificationScaleHL.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/ClassificationScaleHL.cpp"/>
+          <FILE id="LUZNjy" name="ClassificationScaleHL.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/ClassificationScaleHL.h"/>
+          <FILE id="dhIKD6" name="DynamicEqualizer.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/DynamicEqualizer.cpp"/>
+          <FILE id="QS1T81" name="DynamicEqualizer.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/DynamicEqualizer.h"/>
+          <FILE id="j92Lr4" name="Fig6Algorithm.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/Fig6Algorithm.cpp"/>
+          <FILE id="Fyn5dA" name="Fig6Algorithm.h" compile="0" resource="0" file="Source/3dti_Toolkit/HAHLSimulation/Fig6Algorithm.h"/>
+          <FILE id="USh6Zh" name="FrequencySmearing.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/FrequencySmearing.h"/>
+          <FILE id="V65WHw" name="GammatoneMultibandExpander.cpp" compile="1"
+                resource="0" file="Source/3dti_Toolkit/HAHLSimulation/GammatoneMultibandExpander.cpp"/>
+          <FILE id="YHZqRQ" name="GammatoneMultibandExpander.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/GammatoneMultibandExpander.h"/>
+          <FILE id="BQUhvZ" name="Graf3DTIFrequencySmearing.cpp" compile="1"
+                resource="0" file="Source/3dti_Toolkit/HAHLSimulation/Graf3DTIFrequencySmearing.cpp"/>
+          <FILE id="XgQeap" name="Graf3DTIFrequencySmearing.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/Graf3DTIFrequencySmearing.h"/>
+          <FILE id="riLh5e" name="HearingAidSim.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/HearingAidSim.cpp"/>
+          <FILE id="ttWM8q" name="HearingAidSim.h" compile="0" resource="0" file="Source/3dti_Toolkit/HAHLSimulation/HearingAidSim.h"/>
+          <FILE id="M2HNWy" name="HearingLossSim.cpp" compile="1" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/HearingLossSim.cpp"/>
+          <FILE id="reGgLg" name="HearingLossSim.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/HearingLossSim.h"/>
+          <FILE id="J1gTUa" name="HighOrderButterworthFilter.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/HighOrderButterworthFilter.h"/>
+          <FILE id="WjUUDX" name="HighOrderButteworthFilter.cpp" compile="1"
+                resource="0" file="Source/3dti_Toolkit/HAHLSimulation/HighOrderButteworthFilter.cpp"/>
+          <FILE id="yKXbNT" name="MultibandExpander.h" compile="0" resource="0"
+                file="Source/3dti_Toolkit/HAHLSimulation/MultibandExpander.h"/>
+          <FILE id="XnAfQW" name="TemporalDistortionSimulator.cpp" compile="1"
+                resource="0" file="Source/3dti_Toolkit/HAHLSimulation/TemporalDistortionSimulator.cpp"/>
+          <FILE id="vLh2mo" name="TemporalDistortionSimulator.h" compile="0"
+                resource="0" file="Source/3dti_Toolkit/HAHLSimulation/TemporalDistortionSimulator.h"/>
+        </GROUP>
+      </GROUP>
+      <FILE id="g0nmks" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="v1hgUZ" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="WlIEgc" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <XCODE_IPHONE targetFolder="Builds/iOS">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="binaural_3dti_test"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="binaural_3dti_test"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../libs/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_IPHONE>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="binaural_3dti_test"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="binaural_3dti_test"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../libs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../libs/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
