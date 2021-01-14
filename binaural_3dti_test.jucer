@@ -185,7 +185,8 @@
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
   <EXPORTFORMATS>
-    <XCODE_IPHONE targetFolder="Builds/iOS">
+    <XCODE_IPHONE targetFolder="Builds/iOS" iosDevelopmentTeamID="98DW7TVDC6" microphonePermissionNeeded="0"
+                  microphonePermissionsText="This app needs the mic">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" targetName="binaural_3dti_test"/>
         <CONFIGURATION isDebug="0" name="Release" targetName="binaural_3dti_test"/>
