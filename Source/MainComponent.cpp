@@ -24,34 +24,50 @@ MainComponent::MainComponent()
     
 
         // Specify the number of input and output channels that we want to open
-        setAudioChannels (0, 2);
+    setAudioChannels (0, 2);
     
+    deviceManager.closeAudioDevice();
     
     // binaural setup
     listener = myCore.CreateListener();
     mySource = myCore.CreateSingleSourceDSP();
     mySource->SetSpatializationMode(Binaural::TSpatializationMode::HighQuality);
     
-    // Load HRTF file, from a SOFA or 3DTI file, into the CHRTF head of the listener.
-    juce::String hrtf3DTIFile_PATH = "/Users/jbloit/repos/libs/3dti_AudioToolkit/resources/HRTF/3DTI/3DTI_HRTF_IRC1053_512s_44100Hz.3dti-hrtf";
+    tmpFolder = juce::File::getSpecialLocation(juce::File::SpecialLocationType::tempDirectory);
     
+    DBG("TEST FOLDER : " << tmpFolder.getFullPathName());
+    
+    auto hrtfFilename = "3DTI_HRTF_IRC1053_512s_44100Hz.3dti-hrtf";
+    
+    Utils::binaryDataToFile(hrtfFilename, tmpFolder.getChildFile(hrtfFilename));
+    
+    // Load HRTF file, from a SOFA or 3DTI file, into the CHRTF head of the listener.
+    juce::String hrtf3DTIFile_PATH = tmpFolder.getChildFile(hrtfFilename).getFullPathName();
+    
+    DBG("HRTF PATH  : " << hrtf3DTIFile_PATH);
     bool result = HRTF::CreateFrom3dti(hrtf3DTIFile_PATH.toStdString(), listener);
     if (result) {
-        cout<< "HRTF has been loaded successfully";
+        cout<< "HRTF has been loaded successfully\n";
     }
     else {
-        cout<< "HRTF has NOT been loaded successfully";
+        cout<< "HRTF has NOT been loaded successfully\n";
     }
     
+    auto nfcFilename = "NearFieldCompensation_ILD_44100.3dti-ild";
+    
+    Utils::binaryDataToFile(nfcFilename, tmpFolder.getChildFile(nfcFilename));
+    
     // Load ILD for Near Field effect from 3DTI file.
-    juce::String fileILDNearFieldEffect = "/Users/jbloit/repos/libs/3dti_AudioToolkit/resources/ILD/NearFieldCompensation_ILD_44100.3dti-ild";
-    result = ILD::CreateFrom3dti_ILDNearFieldEffectTable(fileILDNearFieldEffect.toStdString(), listener);
-    if (result) { cout<< "ILD Near Field Effect simulation file has been loaded successfully";}
+    juce::String fileILDNearFieldEffectPath = tmpFolder.getChildFile(nfcFilename).getFullPathName();
+    result = ILD::CreateFrom3dti_ILDNearFieldEffectTable(fileILDNearFieldEffectPath.toStdString(), listener);
+    if (result) { cout<< "ILD Near Field Effect simulation file has been loaded successfully\n";}
     else {
-        cout<< "ILD Near Field Effect simulation file has NOT been loaded successfully";
+        cout<< "ILD Near Field Effect simulation file has NOT been loaded successfully\n";
     }
     
     startTimer(20);
+    
+    deviceManager.restartLastAudioDevice();
 }
 
 MainComponent::~MainComponent()
@@ -75,11 +91,6 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
 {
     
     audioPlayer.getNextAudioBlock(bufferToFill);
-
-//    auto rmsL = bufferToFill.buffer->getRMSLevel(0, 0, bufferToFill.numSamples);
-//    auto rmsR = bufferToFill.buffer->getRMSLevel(1, 0, bufferToFill.numSamples);
-//    DBG("rmsL " << juce::String(rmsL));
-//    DBG("rmsR " << juce::String(rmsR));
     
     
 //    bufferToFill.clearActiveBufferRegion();

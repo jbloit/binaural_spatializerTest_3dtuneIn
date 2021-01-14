@@ -4,11 +4,33 @@
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
               headerPath="/Users/jbloit/repos/testApps/binaural_3dti_test/Source/3dti_Toolkit&#10;/Users/jbloit/repos/libs/eigen&#10;/Users/jbloit/repos/libs/cereal/include&#10;/Users/jbloit/repos/libs/API_Cpp/libsofa/src&#10;/Users/jbloit/repos/libs/API_Cpp/libsofa/dependencies/include">
   <MAINGROUP id="GcWq8j" name="binaural_3dti_test">
-    <GROUP id="{B52EEE15-DF34-50AE-0359-8F9675E51C1A}" name="audio">
-      <FILE id="Fovc0z" name="keysRattling.aif" compile="0" resource="1"
-            file="assets/audio/keysRattling.aif"/>
+    <GROUP id="{5CE8A48F-602D-04D6-6BBC-3AA0A84DD797}" name="assets">
+      <GROUP id="{7F0A79FD-3B83-3E65-F6A4-CB9F9D857BB0}" name="3DTI">
+        <FILE id="PjbpUU" name="3DTI_HRTF_IRC1053_512s_44100Hz.3dti-hrtf" compile="0"
+              resource="1" file="assets/3DTI/3DTI_HRTF_IRC1053_512s_44100Hz.3dti-hrtf"/>
+      </GROUP>
+      <GROUP id="{ECC578A4-896C-E5C6-F96E-FC91D9EEDCF6}" name="audio">
+        <FILE id="arNmeo" name="keysRattling.aif" compile="0" resource="1"
+              file="assets/audio/keysRattling.aif"/>
+      </GROUP>
+      <GROUP id="{98B758AF-5056-E980-EC52-7627139BDC2F}" name="ILD">
+        <FILE id="IFA4NN" name="HRTF_ILD_44100.3dti-ild" compile="0" resource="1"
+              file="assets/ILD/HRTF_ILD_44100.3dti-ild"/>
+        <FILE id="dZErcL" name="HRTF_ILD_48000.3dti-ild" compile="0" resource="1"
+              file="assets/ILD/HRTF_ILD_48000.3dti-ild"/>
+        <FILE id="CWMzOS" name="HRTF_ILD_96000.3dti-ild" compile="0" resource="1"
+              file="assets/ILD/HRTF_ILD_96000.3dti-ild"/>
+        <FILE id="SgLPtZ" name="NearFieldCompensation_ILD_44100.3dti-ild" compile="0"
+              resource="1" file="assets/ILD/NearFieldCompensation_ILD_44100.3dti-ild"/>
+        <FILE id="wk4ZXM" name="NearFieldCompensation_ILD_48000.3dti-ild" compile="0"
+              resource="1" file="assets/ILD/NearFieldCompensation_ILD_48000.3dti-ild"/>
+        <FILE id="Ml8BM6" name="NearFieldCompensation_ILD_96000.3dti-ild" compile="0"
+              resource="1" file="assets/ILD/NearFieldCompensation_ILD_96000.3dti-ild"/>
+      </GROUP>
     </GROUP>
     <GROUP id="{7CCE7E08-7B1E-228D-9D6D-B8AEEDF024CD}" name="Source">
+      <FILE id="nbmULr" name="Utils.cpp" compile="1" resource="0" file="Source/Utils.cpp"/>
+      <FILE id="gRb1Lq" name="Utils.h" compile="0" resource="0" file="Source/Utils.h"/>
       <FILE id="F72QUj" name="AudioPlayer.cpp" compile="1" resource="0" file="Source/AudioPlayer.cpp"/>
       <FILE id="nV1K5Y" name="AudioPlayer.h" compile="0" resource="0" file="Source/AudioPlayer.h"/>
       <GROUP id="{A4C56DD5-E5C7-CB0D-5AC6-9D07833BBD4F}" name="3dti_ResourceManager">
