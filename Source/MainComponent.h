@@ -6,6 +6,8 @@
 #include "3dti_ResourceManager/HRTF/HRTFCereal.h"
 #include "AudioPlayer.h"
 #include "Utils.h"
+#include "SpatializerPane.h"
+
 
 //==============================================================================
 /*
@@ -58,6 +60,7 @@ private:
     
     juce::File tmpFolder;
     
+    SpatializerPane spatializerPane;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

@@ -29,6 +29,10 @@
       </GROUP>
     </GROUP>
     <GROUP id="{7CCE7E08-7B1E-228D-9D6D-B8AEEDF024CD}" name="Source">
+      <FILE id="sYgbGU" name="SpatializerPane.cpp" compile="1" resource="0"
+            file="Source/SpatializerPane.cpp"/>
+      <FILE id="wRGBvm" name="SpatializerPane.h" compile="0" resource="0"
+            file="Source/SpatializerPane.h"/>
       <FILE id="nbmULr" name="Utils.cpp" compile="1" resource="0" file="Source/Utils.cpp"/>
       <FILE id="gRb1Lq" name="Utils.h" compile="0" resource="0" file="Source/Utils.h"/>
       <FILE id="F72QUj" name="AudioPlayer.cpp" compile="1" resource="0" file="Source/AudioPlayer.cpp"/>

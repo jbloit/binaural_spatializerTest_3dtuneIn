@@ -4,21 +4,22 @@
 MainComponent::MainComponent()
 {
 
-    addAndMakeVisible(sliderX);
+//    addAndMakeVisible(sliderX);
     sliderX.setRange(-20.0, 20.0);
     sliderX.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
     sliderX.addListener(this);
     
-    addAndMakeVisible(sliderY);
+//    addAndMakeVisible(sliderY);
     sliderY.setRange(-20.0, 20.0);
     sliderY.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
     sliderY.addListener(this);
     
-    addAndMakeVisible(sliderZ);
+//    addAndMakeVisible(sliderZ);
     sliderZ.setRange(-20.0, 20.0);
     sliderZ.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
     sliderZ.addListener(this);
     
+    addAndMakeVisible(spatializerPane);
     
     setSize (800, 600);
     
@@ -159,10 +160,17 @@ void MainComponent::paint (juce::Graphics& g)
 void MainComponent::resized()
 {
     auto area = getLocalBounds();
+  
+    auto rect = area.reduced(proportionOfWidth(0.1));
+    rect.setWidth(rect.getHeight());
+    rect.setCentre(area.getCentre());
+    spatializerPane.setBounds(rect);
     
-    sliderX.setBounds(area.removeFromLeft(proportionOfWidth(0.3)));
-    sliderY.setBounds(area.removeFromLeft(proportionOfWidth(0.3)));
-    sliderZ.setBounds(area);
+    
+    
+//    sliderX.setBounds(area.removeFromLeft(proportionOfWidth(0.3)));
+//    sliderY.setBounds(area.removeFromLeft(proportionOfWidth(0.3)));
+//    sliderZ.setBounds(area);
 }
 
 
@@ -170,22 +178,31 @@ void MainComponent::timerCallback()
 {
     
     Common::CTransform newSourceTrf;
-    newSourceTrf.SetPosition(Common::CVector3(sliderX.getValueObject().getValue(),
-                                              sliderY.getValueObject().getValue(), sliderZ.getValueObject().getValue()));    //Move source to absolute position
+    
+    
+    
+    auto mousePosition = spatializerPane.getSourceCoordinates();
+    
+    DBG("mouse to " << mousePosition.toString());
+    
+    newSourceTrf.SetPosition(Common::CVector3(mousePosition.getY(),
+                                              mousePosition.getX(), 0));    //Move source to absolute position
 
     {
         const juce::ScopedLock sl (lock);
         mySource->SetSourceTransform(newSourceTrf);
     }
     
-    // 3. Set the transformation (position & orientation) for the listener, for instance:
-    Common::CTransform listenerTrf;
-//    listenerTrf.SetOrientation(Common::CQuaternion(0, 0, 0, 0));
-    listenerTrf.SetPosition(Common::CVector3(0,0,0));
-    {
-        const juce::ScopedLock sl (lock);
-        listener->SetListenerTransform(listenerTrf);
-    }
+    
+    
+//    // 3. Set the transformation (position & orientation) for the listener, for instance:
+//    Common::CTransform listenerTrf;
+////    listenerTrf.SetOrientation(Common::CQuaternion(0, 0, 0, 0));
+//    listenerTrf.SetPosition(Common::CVector3(0,0,0));
+//    {
+//        const juce::ScopedLock sl (lock);
+//        listener->SetListenerTransform(listenerTrf);
+//    }
 }
 
 
